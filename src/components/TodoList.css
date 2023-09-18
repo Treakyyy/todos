@@ -1,0 +1,13 @@
+.completed {
+  text-decoration: line-through;
+  color: rgb(151, 156, 160);
+}
+.todo-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.x{
+  display: flex;
+  gap: 10px;
+}
