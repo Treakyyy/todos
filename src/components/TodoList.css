@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-around;
 }
-.x{
+.line-through{
   display: flex;
   gap: 10px;
 }

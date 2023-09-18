@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import './TodoList.css'
-
+import React from 'react';
+import './TodoList.css';
 
 interface TodoItem {
   text: string;
@@ -14,23 +13,19 @@ interface TodoListProps {
 }
 
 function TodoList({ todos, onDeleteTodo, onToggleComplete }: TodoListProps) {
-  const [completedTodos, setCompletedTodos] = useState<boolean[]>(
-    new Array(todos.length).fill(false)
-  );
-
   return (
-    <div className="todo-list">
+    <div>
       <ul>
         {todos.map((todo, index) => (
           <li className="todo-list" key={index}>
             <label>
-              <div className='x'>
+              <div className='line-through'>
                 <input
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => onToggleComplete(index)}
                 />
-                <span className={completedTodos[index] ? 'completed' : ''}>
+                <span className={todo.completed ? 'completed' : ''}>
                   {todo.text}
                 </span>
               </div>
